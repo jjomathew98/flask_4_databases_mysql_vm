@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<section class="mb-6 table-container">
+    <div class="table">
+        <h2 class="text-xl mb-2">Medications Table</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">medication_id</th>
+                    <th class="px-4 py-2">medication_name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for medications in data2 %}
+                <tr>
+                    <td class="border px-4 py-2">{{ medications.medication_id }}</td>
+                    <td class="border px-4 py-2">{{ medications.medication_name }}</td>                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
